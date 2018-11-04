@@ -1,6 +1,6 @@
 [Unit]
 Description=Open DM-Crypt "plain" on SD-card %I
-Documentation=https://github.com/Olf0/crypto-sdcard
+Documentation=https://github.com/Olf0/crypto-sdcard_sbj
 After=systemd-udevd.service systemd-udev-settle.service dev-%i.device
 BindsTo=dev-%i.device
 Conflicts=rescue.target actdead.target factory-test.target
