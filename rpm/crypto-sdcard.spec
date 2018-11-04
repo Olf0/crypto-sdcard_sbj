@@ -24,6 +24,7 @@ Requires:   	sailfish-version < 3.0.0
 %description
 %{summary}
 "Key"-file naming scheme: /etc/crypto-sd/crypto_{luks|plain}_<UUID>.key
+This "sbj" version is specifically for devices, which need the qcrypto kernel module loaded to support modern cryptographic schemes as e.g. XTS.  For all other devices, the original version of crypto-sdcard must be used.
 
 %prep
 %setup -q -n %{name}-%{version}-%{release}
