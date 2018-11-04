@@ -1,4 +1,4 @@
-Name:       	crypto-sdcard
+Name:       	crypto-sdcard_sbj
 Summary:    	Configuration files for unlocking and mounting encrypted SD-cards automatically
 Version:    	0.4
 Release:    	12
@@ -19,7 +19,7 @@ Requires:   	cryptsetup >= 1.4.0
 Requires:   	sailfish-version >= 2.2.0
 Requires:   	sailfish-version < 3.0.0
 # Filter for Jolla 1 phones ("sbj"):
-# Conflicts:  	sbj-version
+# Requires:  	sbj-version
 
 %description
 %{summary}
