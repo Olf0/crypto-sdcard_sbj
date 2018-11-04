@@ -1,8 +1,8 @@
-# crypto-sdcard ("sbj" version)
+# crypto-sdcard ("sbj" edition)
 Configuration files for unlocking and mounting encrypted SD-cards, using udev, udisks2, polkit and systemd.
 
-This version is provided specifically for devices (e.g. Jolla 1 phones aka "sbj"), which need Qualcomm's `qcrypto` kernel module to be loaded in order to support modern cryptographic schemes as e.g. XTS.  
-For all other devices, the [original version](https://github.com/Olf0/crypto-sdcard) shall be used.
+This edition is provided specifically for devices (e.g. Jolla 1 phones aka "sbj"), which need Qualcomm's `qcrypto` kernel module to be loaded in order to support modern cryptographic schemes as e.g. XTS.  
+For all other devices, the [generic edition](https://github.com/Olf0/crypto-sdcard) shall be used.
 
 Extensively tested with systend 225 (which includes udev), udisks2 2.7.5 and polkit 0.104.<br />
 RPM spec file is for SailfishOS 2.2, which provides aforementioned environment.<br />
