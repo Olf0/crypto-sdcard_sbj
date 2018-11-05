@@ -24,7 +24,7 @@ Conflicts:    crypto-sdcard
 
 %description
 %{summary}
-"Key"-file naming scheme: /etc/crypto-sd/crypto_{luks|plain}_<UUID>.key
+"Key"-file naming scheme: /etc/crypto-sdcard/crypto_{luks|plain}_<UUID>.key
 This "sbj" edition is specifically for devices, which need the qcrypto kernel module loaded to support modern cryptographic schemes as e.g. XTS.  For all other devices, the generic edition of crypto-sdcard shall be used.
 
 %prep
@@ -33,7 +33,7 @@ This "sbj" edition is specifically for devices, which need the qcrypto kernel mo
 %build
 
 %install
-mkdir -p %{buildroot}%{_sysconfdir}/%{name}
+mkdir -p %{buildroot}%{_sysconfdir}/crypto-sdcard
 cp -R systemd polkit-1 udev %{buildroot}%{_sysconfdir}/
 
 %files
@@ -48,7 +48,7 @@ cp -R systemd polkit-1 udev %{buildroot}%{_sysconfdir}/
 %{_sysconfdir}/udev/rules.d/82-cryptosd.rules
 # Extraordinary files / dirs:
 %defattr(0640,root,root,0750)
-%dir %{_sysconfdir}/%{name}
+%dir %{_sysconfdir}/crypto-sdcard
 
 %post
 if [ "$1" = "1" ]
