@@ -52,7 +52,7 @@ cp -R systemd polkit-1 udev %{buildroot}%{_sysconfdir}/
 
 %post
 if [ "$1" = "1" ]
-# First install 
+# First install
 then
   # Delete manually installed files from versions before 0.4 and pre-releases on TJC
   rm -f \
@@ -65,6 +65,12 @@ then
   %{_sysconfdir}/systemd/system/crypto-sd-plain@.service \
   %{_sysconfdir}/systemd/system/crypto-sd-plain-udisks@.service \
   %{_sysconfdir}/systemd/system/crypto-sd-symlink@.service
+fi
+if [ "$1" = "2" ]
+# Update installation
+then
+  # Delete "key"-directory with an incorrect name erroneously created by v0.5-1
+  rmdir %{_sysconfdir}/%{name}
 fi
 # Replay adapted https://git.merproject.org/olf/udisks2/blob/master/rpm/udisks2-symlink-mount-path
 OLD_MOUNT_PATH="/media/sdcard"
