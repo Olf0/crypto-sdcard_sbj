@@ -66,12 +66,6 @@ then
   %{_sysconfdir}/systemd/system/crypto-sd-plain-udisks@.service \
   %{_sysconfdir}/systemd/system/crypto-sd-symlink@.service
 fi
-if [ "$1" = "2" ] && [ -e %{_sysconfdir}/%{name} ]
-# Update installation
-then
-  # Delete "key"-directory with an incorrect name erroneously created by v0.5-1
-  rmdir %{_sysconfdir}/%{name}
-fi
 # Replay adapted https://git.merproject.org/olf/udisks2/blob/master/rpm/udisks2-symlink-mount-path
 OLD_MOUNT_PATH="/media/sdcard"
 if [ ! -L "$OLD_MOUNT_PATH" ] 
