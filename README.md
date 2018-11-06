@@ -6,7 +6,7 @@ For all other devices, the [generic edition](https://github.com/Olf0/crypto-sdca
 
 Extensively tested with systend 225 (which includes udev), udisks2 2.7.5 and polkit 0.104.<br />
 RPM spec file is for SailfishOS 2.2, which provides aforementioned environment.<br />
-RPMs built for SailfishOS are available at [OpenRepos](https://openrepos.net/content/olf/crypto-sdcard_sbj).
+RPMs built for SailfishOS are available at [OpenRepos](https://openrepos.net/content/olf/crypto-sdcard-sbj-edition).
 
 The necessary steps to prepare an SD-card (or any other removable storage) are described at [Together.Jolla.com](https://together.jolla.com/question/179054/how-to-creating-partitions-on-sd-card-optionally-encrypted/).<br />
 Note that the "key"-files reside unencrypted on fixed, internal mass storage, as mobile devices usually have only a single user, who unlocks the whole device.<br />
