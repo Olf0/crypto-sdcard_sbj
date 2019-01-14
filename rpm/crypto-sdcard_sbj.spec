@@ -1,7 +1,7 @@
 Name:       	crypto-sdcard_sbj
 Summary:    	Configuration files for unlocking and mounting encrypted SD-cards automatically ("sbj" edition)
 Version:    	0.5
-Release:    	9
+Release:    	10
 Group:      	System/Base
 Distribution:	SailfishOS
 Vendor:     	olf
