@@ -20,7 +20,7 @@ Conflicts:    crypto-sdcard
 
 %description
 %{summary}
-"Key"-file naming scheme: /etc/crypto-sdcard/crypto_{luks|plain}_<UUID>.key
+"Key"-file naming scheme: /etc/crypto-sdcard/crypto_luks_<UUID>.key rsp. /etc/crypto-sdcard/crypto_plain_<device-name>.key
 This "sbj" edition is specifically for devices, which need the qcrypto kernel module loaded to support modern cryptographic schemes as e.g. XTS.  For all other devices, the generic edition of crypto-sdcard shall be used.
 
 %prep
