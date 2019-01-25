@@ -1,22 +1,21 @@
 Name:       	crypto-sdcard_sbj
 Summary:    	Configuration files for unlocking and mounting encrypted SD-cards automatically ("sbj" edition)
 Version:    	0.6
-Release:    	1
+Release:    	2
 Group:      	System/Base
 Distribution:	SailfishOS
 Vendor:     	olf
 Packager:   	olf
 License:    	MIT
 URL:        	https://github.com/Olf0/%{name}
-Source0:    	%{name}-%{version}-%{release}.tar.gz
+Source:     	%{name}-%{version}-%{release}.tar.gz
 Source1:    	https://github.com/Olf0/%{name}/archive/%{version}-%{release}.tar.gz
 BuildArch:  	noarch
-BuildRequires:	systemd
 Requires:   	systemd
 Requires:   	polkit
 Requires:   	udisks2
 Requires:   	cryptsetup >= 1.4.0
-Conflicts:    crypto-sdcard
+Conflicts:  	crypto-sdcard
 
 %description
 %{summary}
@@ -24,7 +23,7 @@ Conflicts:    crypto-sdcard
 This "sbj" edition is specifically for devices, which need the qcrypto kernel module loaded to support modern cryptographic schemes as e.g. XTS.  For all other devices, the generic edition of crypto-sdcard shall be used.
 
 %prep
-%setup -q -n %{name}-%{version}-%{release}
+%setup -n %{name}-%{version}-%{release}
 
 %build
 
