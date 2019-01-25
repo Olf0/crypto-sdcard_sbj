@@ -1,27 +1,26 @@
 Name:       	crypto-sdcard_sbj
 Summary:    	Configuration files for unlocking and mounting encrypted SD-cards automatically ("sbj" edition)
 Version:    	0.6
-Release:    	1
+Release:    	2
 Group:      	System/Base
 Distribution:	SailfishOS
 Vendor:     	olf
 Packager:   	olf
 License:    	MIT
 URL:        	https://github.com/Olf0/%{name}
-Source0:    	%{name}-%{version}-%{release}.tar.gz
+Source:     	%{name}-%{version}-%{release}.tar.gz
 Source1:    	https://github.com/Olf0/%{name}/archive/%{version}-%{release}.tar.gz
 BuildArch:  	noarch
-BuildRequires:	systemd
 Requires:   	systemd
 Requires:   	polkit
 Requires:   	udisks2
 Requires:   	cryptsetup >= 1.4.0
 Requires:   	sailfish-version >= 2.2.0
 # Omit anti-dependency on future, untested SFOS versions, until a known conflict exists:
-# Requires:   	sailfish-version < 3.0.1
+# Requires:  	sailfish-version < 3.0.1
 # Filter for Jolla 1 phones ("sbj"):
 # Requires:  	sbj-version
-Conflicts:    crypto-sdcard
+Conflicts:  	crypto-sdcard
 
 %description
 %{summary}
@@ -29,7 +28,7 @@ Conflicts:    crypto-sdcard
 This "sbj" edition is specifically for devices, which need the qcrypto kernel module loaded to support modern cryptographic schemes as e.g. XTS.  For all other devices, the generic edition of crypto-sdcard shall be used.
 
 %prep
-%setup -q -n %{name}-%{version}-%{release}
+%setup -n %{name}-%{version}-%{release}
 
 %build
 
@@ -69,7 +68,7 @@ then
 fi
 # Replay adapted https://git.merproject.org/olf/udisks2/blob/master/rpm/udisks2-symlink-mount-path
 OLD_MOUNT_PATH="/media/sdcard"
-if [ ! -L "$OLD_MOUNT_PATH" ] 
+if [ ! -L "$OLD_MOUNT_PATH" ]
 then
   DEF_UID="$(grep '^UID_MIN' /etc/login.defs | tr -s ' ' | cut -f 2 -d ' ')"
   DEVICEUSER="$(getent passwd $DEF_UID | sed 's/:.*//')"
