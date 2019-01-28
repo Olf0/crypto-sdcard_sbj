@@ -1,7 +1,7 @@
 # crypto-sdcard ("sbj" edition)
 #### Configuration files for unlocking and mounting encrypted SD-cards, using udev, udisks2, polkit and systemd.
 
-This edition is provided specifically for devices (e.g. Jolla 1 phones aka "sbj"), which need Qualcomm's `qcrypto` kernel module to be loaded in order to support modern cryptographic schemes as e.g. XTS.  
+This edition is provided specifically for devices (e.g. Jolla 1 phones aka "sbj"), which need Qualcomm's `qcrypto` kernel module to be loaded in order to support modern cryptographic schemes as e.g. XTS.
 For all other devices, the [generic edition](https://github.com/Olf0/crypto-sdcard) shall be used.
 
 Extensively tested with systemd 225 (which includes udev), udisks2 2.7.5 and polkit 0.104.<br />
@@ -40,8 +40,8 @@ Version history:
   Optimised configuration file names.<br />
   RPM spec file provided.
 * v0.3<br />
-  Switched to a UUID-based "key"-file naming scheme for LUKS partitions to allow for swapping encrypted SD-cards easily and moved "key"-files into a directory.  Missed to properly implement this change for "plain" partitions, as they have no UUID!<br /> 
-  Hence the "key"-file format has changed again (please rename your "key"-files accordingly): 
+  Switched to a UUID-based "key"-file naming scheme for LUKS partitions to allow for swapping encrypted SD-cards easily and moved "key"-files into a directory.  Missed to properly implement this change for "plain" partitions, as they have no UUID!<br />
+  Hence the "key"-file format has changed again (please rename your "key"-files accordingly):
   * For Cryptsetup LUKS: `/etc/crypto-sdcard/crypto_luks_<UUID>.key`
   * For Cryptsetup "plain": `/etc/crypto-sdcard/crypto_plain_.key`
 * v0.2<br />
