@@ -1,15 +1,14 @@
 Name:          crypto-sdcard_sbj
 Summary:       Configuration files for unlocking and mounting encrypted SD-cards automatically ("sbj" edition)
 Version:       1.0
-Release:       3
+Release:       4
 Group:         System/Base
 Distribution:  SailfishOS
 Vendor:        olf
 Packager:      olf
 License:       MIT
 URL:           https://github.com/Olf0/%{name}
-Source:        %{name}-%{version}-%{release}.tar.gz
-# Source1:     https://github.com/Olf0/%{name}/archive/%{version}-%{release}.tar.gz
+Source:        https://github.com/Olf0/%{name}/archive/%{version}-%{release}/%{name}-%{version}-%{release}.tar.gz
 BuildArch:     noarch
 Requires:      systemd
 Requires:      polkit
