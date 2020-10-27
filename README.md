@@ -1,3 +1,6 @@
+***This git repository was re-integrated into the [crypto-sdcard](https://github.com/Olf0/crypto-sdcard) repository as the [qcrypto branch](https://github.com/Olf0/crypto-sdcard/tree/qcrypto).***<br />
+***Thus this [crypto-sdcard_sbj](https://github.com/Olf0/crypto-sdcard_sbj) repository was switched to read-only ("archived" in Github parlance) on 2020-10-27.***
+
 # crypto-sdcard ("sbj" edition)
 #### Configuration files for unlocking and mounting encrypted SD-cards, using udev, udisks2, polkit and systemd.
 
